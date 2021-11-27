@@ -23,13 +23,16 @@ const letterPositions = function (sentence) {
   const results = {};
   // for loop to go through sentence 
   for (let j = 0; j < sentence.length; j++) {
-  //
+  // allows us to skip function 
     if (sentence[j] !== " "){
   // letter equal to word index 
     let letter = sentence[j]
+  // this code checks if there is a key called letter 
     if (!results[letter]) {
+  // creates letter key with to equal each indiviual character
       results[letter] = [j]
     } else {
+  // if letter key already exists it is pushed into the appropricate object key
       results[letter].push(j) 
     }
   }
@@ -37,7 +40,7 @@ const letterPositions = function (sentence) {
   return results;
 };
 
-//(letterPositions("lighthouse in the house"))
+console.log(letterPositions("lighthouse in the house"))
 assertArraysEqual(letterPositions("hello").e, [1]);
 
 

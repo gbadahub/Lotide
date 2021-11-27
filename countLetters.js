@@ -10,7 +10,6 @@ const countLetters = function (string) {
   const newObj = {}
   // .replace removes the space from the string and .split returns each invidual character as an array
   let str = string.replace(/\s+/g, '').split('')
-  // letter now signifies each character in the loop 
   for (let letter of str) {
         if(!newObj[letter]){
           newObj[letter] = 1
